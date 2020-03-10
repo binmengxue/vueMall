@@ -16,7 +16,7 @@
     <div class="ad-banner">
       <img :src="adBanner.PICTURE_ADDRESS" width="100%" />
     </div>
-    <div class="tjshoop">推荐商品</div>
+    <div class="tjshoop">推荐商品1</div>
     <ul class="tjUlimg">
       <li v-for="item in recommendGoods" :key="item.goodsId">
         <img :src="item.image" alt="" />
