@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home/Home'
+import Home from '@/components/Pages/Home'
+import List from '@/components/Pages/List'
+import Cart from '@/components/Pages/Cart'
+import My from '@/components/Pages/My'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -8,6 +11,22 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: Cart
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: List
+    },
+    {
+      path: '/my',
+      name: 'my',
+      component: My
     }
+
   ]
 })

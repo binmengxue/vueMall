@@ -326,6 +326,15 @@ Mock.mock('http://localhost/user', {
     buyTime: '08:00:00-20:30:00',
     hotGoods: [
       {
+        mallCategoryId: 1,
+        mallPrice: 3.9,
+        image:
+          'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3167437339,1453134668&fm=26&gp=0.jpg',
+        goodsId: 'fb0f913950944b66a97ae262ad14209a',
+        price: 24,
+        name: '甜美西瓜500g/箱'
+      },
+      {
         mallPrice: 3.9,
         image:
           'http://images.baixingliangfan.cn/compressedPic/20180415120500_6504.jpg',
@@ -616,8 +625,8 @@ Mock.mock('http://localhost/user', {
         goodsName: '捷客每日红提味曲奇120g/盒'
       },
       {
-        image:
-          'http://images.baixingliangfan.cn/compressedPic/20171225110825_6758.jpg',
+        mallCategoryId: 1,
+        image: 'http://images.baixingliangfan.cn/compressedPic/20171225110825_6758.jpg',
         mallPrice: 26,
         goodsId: 'fa750a815cfd46c3ba468db800f0e370',
         price: 28,
