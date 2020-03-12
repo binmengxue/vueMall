@@ -1,6 +1,6 @@
 <template>
 <div class="content">
-  <Top  v-bind:htmlTitle="'首页'" v-bind:isShow="true"/>
+  <Top  v-bind:htmlTitle="'首页'" v-bind:isShow="false"/>
   <div class="main">
     <mt-swipe :auto="4000" class="imgswiper" style="height:150px;">
       <mt-swipe-item v-for="item in swipeimgs" :key="item.goodsId">

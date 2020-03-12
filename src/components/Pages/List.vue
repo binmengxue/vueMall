@@ -19,7 +19,7 @@
     <div class="right">
       <div class="rightMain" style="height:1100px">
         <ul class="navbarCont">
-           <li  v-for="item in hotGoods" :key="item.goodsId"  >
+           <li  v-for="item in hotGoods" :key="item.goodsId" @click="detailClick(item)" >
              <img :src="item.image" />
              <div class="navbarCont-div">
               <p>商品名称：{{item.name}}</p>
@@ -88,6 +88,9 @@ export default {
           this.hotGoods = listAry
         }
       }
+    },
+    detailClick: function(item) {
+      this.$router.push({ name: 'listdetail', query: {obj: item}})
     }
   }
 

@@ -11,6 +11,7 @@
           列表
         </mt-tab-item>
         <mt-tab-item id="cart">
+          <div class="ball">{{this.$store.state.cartnumber}}</div>
           <img slot="icon" src="../../assets/img/index/whitebar3.png" />
           购物车
         </mt-tab-item>
@@ -30,6 +31,9 @@ export default {
       selected: 'home'
     }
   },
+  created() {
+
+  },
   watch: {
     selected: function(newV, oldV) {
       this.$router.push({ name: newV })
@@ -42,6 +46,20 @@ export default {
 .footer {
   width: 100%;
   height: 55px;
+  position: relative;
+}
+.ball{
+  width:16px;
+  height:16px;
+  border-radius: 8px;
+  background: #ff0000;
+  font-size: 12px;
+  color:#fff;
+  position: absolute;
+  top:5px;
+  right:22px;
+}
+.mint-tab-item{
   position: relative;
 }
 </style>

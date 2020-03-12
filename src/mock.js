@@ -324,6 +324,16 @@ Mock.mock('http://localhost/user', {
       }
     ],
     buyTime: '08:00:00-20:30:00',
+    hotGoodsDetail: {
+      mallCategoryId: 1,
+      mallPrice: 3.9,
+      image:
+        'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3167437339,1453134668&fm=26&gp=0.jpg',
+      goodsId: 'fb0f913950944b66a97ae262ad14209a',
+      price: 24,
+      title: '甜美西瓜500g/箱',
+      detail: '黑美人西瓜种子大果型黑皮巨型无籽西瓜种籽超甜红肉瓤春夏季水果 黑玫瑰西瓜30粒简装'
+    },
     hotGoods: [
       {
         mallCategoryId: 1,

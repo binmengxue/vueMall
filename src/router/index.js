@@ -4,6 +4,7 @@ import Home from '@/components/Pages/Home'
 import List from '@/components/Pages/List'
 import Cart from '@/components/Pages/Cart'
 import My from '@/components/Pages/My'
+import Listdetail from '@/components/Pages/Listdetail'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -26,7 +27,11 @@ export default new Router({
       path: '/my',
       name: 'my',
       component: My
+    },
+    {
+      path: '/listdetail',
+      name: 'listdetail',
+      component: Listdetail
     }
-
   ]
 })
