@@ -11,12 +11,9 @@
           列表
         </mt-tab-item>
         <mt-tab-item id="cart">
-          <div class="ball">{{this.$store.state.cartnumber}}</div>
+          <div class="ball" v-show="this.$store.state.cartnumber!=0">{{this.$store.state.cartnumber}}</div>
           <img slot="icon" src="../../assets/img/index/whitebar3.png" />
           购物车
-        </mt-tab-item>
-        <mt-tab-item id="my">
-          <img slot="icon" src="../../assets/img/index/whitebar4.png" /> 我的
         </mt-tab-item>
       </mt-tabbar>
     </div>

@@ -48,25 +48,32 @@ export default {
   },
   watch: {
     // 计算属性的 getter
-    totalClick(newName, oldName) {
-      console.log(newName)
-      this.cartList.forEach(element => {
-        if (element.isOpen) {
-          this.total = element.price * element.num
-          console.log(this.total)
-          this.$forceUpdate()
-        }
-      })
-    },
-    deep: true
+    // totalClick(newName, oldName) {
+    //   console.log(newName)
+    //   this.cartList.forEach(element => {
+    //     if (element.isOpen) {
+    //       this.total = element.price * element.num
+    //       console.log(this.total)
+    //       this.$forceUpdate()
+    //     }
+    //   })
+    // },
+    // deep: true
   },
   created() {
     if (this.$store.state.goodLists.length > 0) {
       this.cartList = this.$store.state.goodLists
+      this.cartList.forEach(element => {
+        if (element.isOpen) {
+          this.total = this.total + element.price * element.num
+          this.$forceUpdate()
+        }
+      })
     }
   },
   methods: {
     reduceBtn: function(index, number) {
+      this.total = 0
       this.totalNumber = 0
       number--
       if (number <= 1) {
@@ -76,17 +83,20 @@ export default {
       this.cartList.forEach(element => {
         if (element.isOpen) {
           this.totalNumber = this.totalNumber + element.num
+          this.total = this.total + element.price * element.num
         }
       })
       this.$store.commit('acrtClick', this.totalNumber)
     },
     addBtn: function(index, number) {
+      this.total = 0
       this.totalNumber = 0
       number++
       this.cartList[index].num = number
       this.cartList.forEach(element => {
         if (element.isOpen) {
           this.totalNumber = this.totalNumber + element.num
+          this.total = this.total + element.price * element.num
         }
       })
       this.$store.commit('acrtClick', this.totalNumber)

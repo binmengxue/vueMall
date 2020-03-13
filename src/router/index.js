@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from '@/components/Pages/Home'
 import List from '@/components/Pages/List'
 import Cart from '@/components/Pages/Cart'
-import My from '@/components/Pages/My'
 import Listdetail from '@/components/Pages/Listdetail'
 Vue.use(Router)
 export default new Router({
@@ -22,11 +21,6 @@ export default new Router({
       path: '/list',
       name: 'list',
       component: List
-    },
-    {
-      path: '/my',
-      name: 'my',
-      component: My
     },
     {
       path: '/listdetail',
