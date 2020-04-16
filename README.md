@@ -1,5 +1,5 @@
 # vuemall
-
+## 此项目数据是用mock.js造假数据，然后前端用VUE编写
 > A Vue.js project
 
 ## Build Setup
